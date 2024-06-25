@@ -1,0 +1,11 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none !important;
+}
+
+body {
+    background-image: url('../assets/bg.png') !important;
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+}
