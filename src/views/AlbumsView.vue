@@ -9,13 +9,13 @@
     </div>
     <div class="pagination">
       <button
-        class="page-number"
+        class="page-dot"
         v-for="page in totalPages"
         :key="page"
         @click="changePage(page)"
         :class="{ active: currentPage === page }"
       >
-        {{ page }}
+        •
       </button>
     </div>
   </div>
@@ -30,7 +30,7 @@ export default defineComponent({
     const albums = ref([]);
     const albumsStore = useAlbumsStore();
     const currentPage = ref(1);
-    const itemsPerPage = ref(6);
+    const itemsPerPage = ref(7);
 
     const totalPages = computed(() => {
       return Math.ceil(albums.value.length / itemsPerPage.value);
@@ -67,6 +67,7 @@ export default defineComponent({
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  margin-top: 65px;
 }
 
 .album-table {
@@ -82,19 +83,20 @@ export default defineComponent({
   display: flex;
   align-items: center;
   padding: 15px;
-  background-color: #333;
+  background-color: #fbf6E4;
+  border: 2px dotted rgb(144, 1, 1);
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .album-row:hover {
-  background-color: #555;
+  font-weight: bold;
   transform: scale(1.02);
 }
 
 .album-link {
   text-decoration: none;
-  color: whitesmoke;
+  color: rgb(144, 1, 1);
   width: 100%;
 }
 
@@ -105,29 +107,27 @@ export default defineComponent({
 
 .pagination {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  position: absolute;
+  top: 55%;
+  right: 300px;
+  transform: translateY(-50%);
+  align-items: center;
 }
 
-.page-number {
+.page-dot {
   background: none;
-  border: 1px solid whitesmoke;
-  color: whitesmoke;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 0 5px;
+  border: none;
+  color: rgb(144, 1, 1);
+  font-size: 2rem;
+  line-height: 1;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.5s;
+  padding: 0;
 }
 
-.page-number:hover {
-  background-color: #555;
-  color: whitesmoke;
-}
-
-.page-number.active {
-  background-color: whitesmoke;
-  color: black;
-  border-color: black;
+.page-dot:hover,
+.page-dot.active {
+  color: white;
 }
 </style>

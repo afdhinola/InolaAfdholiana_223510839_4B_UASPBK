@@ -1,72 +1,36 @@
 <template>
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo">
-        <router-link to="/">
-        </router-link>
-      </div>
-      <div class="nav-links">
-        <router-link to="/todos"><li>TODOS</li></router-link>
-        <router-link to="/post"><li>POSTS</li></router-link>
-        <router-link to="/albums"><li>ALBUMS</li></router-link>
-      </div>
-    </div>
-  </nav>
-</template>
-
-<script>
-export default {
-  name: 'Navbar',
-};
-</script>
-
-<style scoped>
-.navbar {
-  background-color: transparent;
-  color: white;
-  padding: 10px 0;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  margin-top: 120px;
-  margin-left: 112px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo i {
-  font-size: 1.5rem;
-  margin-right: 5px;
-}
-
-.logo-text {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  color: brown;
-  background-color: white;
-  border-radius: 25px;
-  padding: 6px;
-}
-
-.nav-links li {
-  list-style: none;
-  margin-left: 20px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 800;
-}
-</style>
+    <nav>
+      <ul>
+        <li>
+          <router-link to="/todos">Todos</router-link>
+        </li>
+        <li>
+          <router-link to="/post">Post</router-link>
+        </li>
+        <li>
+          <router-link to="/albums">Albums</router-link>
+        </li>
+      </ul>
+    </nav>
+  </template>
+  
+  <style>
+    nav {
+      display: flex;
+      background-color: transparent;
+      margin-left: 410px;
+      margin-top: 48px;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      gap: 195px;
+    }
+    li {
+      margin: 0 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+  

@@ -1,10 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
-    background-image: url('../assets/bg.png') !important;
-    background-size: cover;
+    background-image: url('../assets/bg4.png') !important;
+    background-color: #fbf6E4;
+    background-size: contain;
     background-position: center;
-    height: 120vh;
+    background-repeat: no-repeat;
+    height: 95vh;
+    max-height: 95vh;
+    max-width: 200vh;
+    overflow: hidden;
+    width: 200vh;
 }

@@ -1,6 +1,5 @@
 <template>
   <div class="album-detail">
-    <h1>{{ albumTitle }}</h1>
     <div class="photos-grid">
       <div
         class="photo-container"
@@ -50,22 +49,19 @@ export default defineComponent({
 
 <style scoped>
 .album-detail {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: transparent;
+  height: 600px;
+  max-height: 500px;
+  border: 2px dotted rgb(144, 1, 1);
+  overflow: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
+  margin-top: 75px;
   margin-bottom: 20px;
-}
-
-.album-detail h1 {
-  font-size: 2rem;
-  color: #00bfff;
-  margin-bottom: 20px;
-  font-weight: bold;
 }
 
 .photos-grid {
@@ -78,11 +74,11 @@ export default defineComponent({
   width: 100%;
   overflow: hidden;
   border-radius: 8px;
-  border: 2px dotted wheat; /* Light pink */
+  border: 2px dotted rgb(144, 1, 1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.5s, box-shadow 0.5s;
-  background-color: #fff; /* Whitesmoke */
+  background-color: #fff;
 }
 
 .photo-container:hover {
